@@ -1,0 +1,22 @@
+1- Lambda is equivalent to a function(method) without a name.
+
+2- Lambda's also referred as Anonymous functions.
+    -Method parameters
+    -Method Body
+    -Return Type
+
+3- Lambdas are not tied to any class like a regular method.
+
+4- Lambda can also be assigned to variable and passed around.
+
+-- Lambda Expression --
+
+ ( )        ->       { }
+ lambda     Arrow    Lambda Body
+ Input
+ Parameters
+
+
+ --Usage of Lambda--
+ 1- Lambda is mainly used to implement Functional Interfaces(SAM)
+ --SAM ( Single Abstract Method)--

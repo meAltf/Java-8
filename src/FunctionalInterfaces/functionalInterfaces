@@ -1,0 +1,22 @@
+Functional Interfaces
+
+1- Exists since Java 1.0
+
+2- A functional Interfaces (SAM) is an interface that has exactly one abstract method.
+
+@FunctionalInterface:
+
+- Optional annotation to signify an interface as Functional Interface.
+
+-- New Functional Interface in Java-8 --
+
+1- Consumer
+2- Predicate
+3- Function
+4- Supplier
+
+- Every interface has their own set of extension for improve
+
+1- Consumer- BiConsumer
+2- predicate- BiPredicate
+3- Function- BiFunction, UnaryOperator, BinaryOperator
