@@ -1,0 +1,13 @@
+Lambdas and Local Variables
+
+-- Local Variable--
+
+- Any variable that is declared inside a method is called a local variable.
+
+- Lambdas have some restrictions on using local Variables:
+
+-- Not allowed to use the same the local variable name as lambda parameters or inside the lambda body.
+
+-- Not allowed re-assign a value to a local variable.
+
+---- No restriction on instance variables.
