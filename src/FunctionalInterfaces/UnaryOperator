@@ -1,0 +1,5 @@
+UnaryOperator
+
+- When input and output are same type then you must use the
+ unaryOperator instead of using function.
+
