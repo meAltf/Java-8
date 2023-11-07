@@ -20,3 +20,6 @@ Functional Interfaces
 1- Consumer- BiConsumer
 2- predicate- BiPredicate
 3- Function- BiFunction, UnaryOperator, BinaryOperator
+
+
+-- Function is Java is nothing, it only a method in a class ---
