@@ -1,0 +1,18 @@
+Constructor reference
+
+- Constructor is something which invoked during creation of class in java
+
+
+-- Syntax --
+
+Classname :: new
+
+-- For implementing this we need to a empty constructor..-- Important aspect...
+
+-Example
+
+Supplier<Student> studentSupplier = Student :: new;
+
+- Invalid when we using this syntax to create class and its end up with a compilation error
+
+Student student = student :: new; // compilation issue-error
