@@ -7,7 +7,8 @@ import java.util.function.Predicate;
 
 public class RefactorMethodReferenceExample {
 
-    static Predicate<Student> p1 = RefactorMethodReferenceExample:: greaterThanGradeLevel;
+    //static Predicate<Student> p1 = (s) -> s.getGradeLevel() >= 3; // Lambda expression
+    static Predicate<Student> p1 = RefactorMethodReferenceExample:: greaterThanGradeLevel; // Method reference expression
 
     public static boolean greaterThanGradeLevel(Student s) {
 
