@@ -1,0 +1,16 @@
+Effectively Final
+
+--Lambda's are allowed to use local variables but not allowed to modify it even though they are not declared final.
+ this concept is called EFFECTIVELY FINAL.
+
+ - Not allowed to modify the value inside the lambda.
+-   reassigning not allowed
+
+ --Prior to JAva-8, any variable that's used inside the anonymous class should be declared final.
+
+
+
+-- Advantage of Effectively Final --
+
+- Easy to perform concurrency operations..
+- Promotes functional programming and demotes the imperative style of programming.
