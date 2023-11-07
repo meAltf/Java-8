@@ -1,0 +1,33 @@
+Method Reference
+
+- Its purpose is to simplify the implementation of Functional Interfaces.
+
+- Shortcut for writing the Lambda Expression.
+
+- Refer a method in a class.
+
+--- Syntax of Method Reference ---
+
+ClassName :: instance-methodName  -- left side reference to the class name and right side reference to methodName
+
+ClassName :: static-methodName
+
+Instance :: methodName
+
+-- Where to use Method Reference--
+
+- Where Lambda expressions referring to a method directly
+
+Using Lambda -
+
+Function <String, String> toUpperCaseLambda = (s).toUpperCase();
+
+Using Method Reference -
+
+Function <String, String> toUpperCaseMethodReference = String::toUpperCase;
+
+Where Method Reference is not applicable
+
+Example-
+
+Predicate <Student> predicateUsingLambda = (s) -> s.getGradeLevel() >= 4;
