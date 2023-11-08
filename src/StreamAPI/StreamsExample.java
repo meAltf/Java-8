@@ -19,9 +19,13 @@ public class StreamsExample {
 
         Map<String,List<String>> studentMap = StudentDataBase.getAllStudents().stream()
                 //.filter((student -> student.getGradeLevel() >=3))  //enhancing this using adding more conditions..
-                .filter(studentPredicate)
-                .filter(studentgpaPredicate)
-                .collect(Collectors.toMap(Student::getName, Student::getActivities));
+                .filter(studentPredicate) // Stream of Students
+                .filter(studentgpaPredicate) // Stream of Students
+                .collect(Collectors.toMap(Student::getName, Student::getActivities)); // Map of filtering students
+        /**
+         * Collect method is something which start stream either non of the method starting..
+         * Keep in mind this..
+         */
 
         System.out.println(studentMap);
     }
