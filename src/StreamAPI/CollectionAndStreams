@@ -21,3 +21,5 @@
 
     - Streams can be traversed only once.
     -Perform INTERNAL ITERATION to iterate through the elements.
+
+    --- Keep in mind these things---
