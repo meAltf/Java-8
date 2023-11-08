@@ -1,0 +1,18 @@
+## Introduction to Streams API
+
+- Main purpose is to perform some operation on collections.
+
+- Parallel operations are easy to perform with stream API without having to spawn a multiple threads.
+
+- Streams API can be also used with arrays or any kind of I/O
+
+
+## Stream
+
+- Stream is a sequence of elements which can be created out of a collection such as List of Arrays or any kind of I/O resources and etc...
+
+List<String> names = Arrays.asList("Alataf", "Azad", "Warish");
+names.stream(); // create a stream
+
+- Stream operations can be performed either sequentially or parallel.
+    names.parallelStream(); // creates a parallel stream
