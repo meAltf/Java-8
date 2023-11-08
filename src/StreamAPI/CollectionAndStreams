@@ -1,0 +1,23 @@
+## Collections and Streams
+
+- Collections
+ - Can add or modify elements at any point of time.
+ -List-> list.add(<Element>)
+
+ - Elements in the collection can be accessed in any order.use appropriate methods based on the collection.
+ - like, List-> list.get(4);
+
+ - Collections is eagerly constructed.
+
+ - Collections can be traversed "n" number of times.
+ -    -Perform EXTERNAL ITERATION to iterate through the elements.
+
+
+ -Streams
+    -Cannot add or modify elements in the stream.
+    - It is a fixed data set.
+    -Elements in the stream can be accessed only in sequence.
+    - Streams lazily constructed.
+
+    - Streams can be traversed only once.
+    -Perform INTERNAL ITERATION to iterate through the elements.
