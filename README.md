@@ -34,7 +34,8 @@
 
 ## Contributing
 
-- If you would like to contribute to this repository, please feel free to do so. You can submit pull requests with your changes.
+- If you would like to contribute to this repository, please feel free to do so.
+- You can submit pull requests with your changes.
 
 
 
