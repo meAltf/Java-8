@@ -19,17 +19,20 @@ public class StreamsExample {
 
         Map<String,List<String>> studentMap = StudentDataBase.getAllStudents().stream()
                 //.filter((student -> student.getGradeLevel() >=3))  //enhancing this using adding more conditions..
-                .peek((student -> {
+                .peek((student -> {  // [ .peek work as consumer means it takes an input but doesn't return anything in output ]
                     System.out.println(student);
                 }))
+
                 .filter(studentPredicate) // Stream of Students
                 .peek((student -> {
                 System.out.println("After 1 st Filter " + student);
                 }))
+
                 .filter(studentgpaPredicate) // Stream of Students
                 .peek((student -> {
                     System.out.println("After 2 nd Filter " + student);
                 }))
+
                 .collect(Collectors.toMap(Student::getName, Student::getActivities)); // Map of filtering students
         /**
          * Collect method is something which start stream either non of the method starting..
