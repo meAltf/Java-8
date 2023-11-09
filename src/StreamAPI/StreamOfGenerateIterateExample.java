@@ -26,7 +26,7 @@ public class StreamOfGenerateIterateExample {
 
     public static void main(String[] args) {
 
-        Stream<String> stringStream = Stream.of("adam","dan","jenny","dave");
+        Stream<String> stringStream = Stream.of("alataf", "ansari", "warish");
         stringStream.forEach(System.out::println);
 
         List<Integer> integerList  = Stream.iterate(1, x->x*2)
