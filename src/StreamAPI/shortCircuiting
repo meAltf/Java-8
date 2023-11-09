@@ -1,0 +1,13 @@
+--- Short Circuiting ---
+
+1- In an expression, if two boolean variable are and the operation will be "AND"
+   then,
+   If the first expression evaluates to "false" then the second expression won't even execute
+
+
+2- In an expression, if two boolean variable are and the operation will be "OR"
+   then,
+   If the first expression evaluates to "true" then the second expression won't even execute
+
+3- limit() | findFirst() | findAny() | anyMatch() | allMatch() | noneMatch() ->
+    - All these functions doesn't have to iterate the whole stream to evaluate the result..
