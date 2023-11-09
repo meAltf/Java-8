@@ -16,7 +16,7 @@ import static java.util.stream.Collectors.toSet;
  * map : Convert(transform) one type to another
  * Don't get confused this with Map collection
  */
-public class StreamsMaoExample {
+public class StreamsMapExample {
 
     public static List<String> namesList(){
 
