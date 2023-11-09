@@ -1,5 +1,8 @@
 package StreamAPI;
 
+import data.Student;
+import data.StudentDataBase;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -37,6 +40,13 @@ public class StreamReduceExample {
                 .reduce( (a,b) -> a*b); // performs multiplication for each element in the stream and returns a new result fo.
     }
 
+    public static Optional<Student> getHighestGradeStudent(){
+
+        Optional<Student> studentOptional =  StudentDataBase.getAllStudents().stream()
+                .reduce((s1,s2)->(s1.getGpa()>s2.getGpa()) ? s1 : s2);
+        return studentOptional;
+    }
+
     public static void main(String[] args) {
         List<Integer> integers = Arrays.asList(1,3,5,7);
         List<Integer> integers1 = new ArrayList<>();
@@ -53,5 +63,7 @@ public class StreamReduceExample {
         if(result1.isPresent()){
             System.out.println(result1.get());
         }
+
+        System.out.println(getHighestGradeStudent().get());
     }
 }
