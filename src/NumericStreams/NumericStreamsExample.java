@@ -21,9 +21,9 @@ public class NumericStreamsExample {
 
     }
 
-    public static int sumOfNumbersIntStream(){
+    public static int sumOfNNumbersIntStream(){
 
-        return IntStream.rangeClosed(1,6) // 1,2,3,4,5,6
+        return IntStream.rangeClosed(1,6) // 1,2,3,4,5,6----
                 .sum(); //saves the unboxing effort.
 
     }
@@ -34,6 +34,6 @@ public class NumericStreamsExample {
 
         System.out.println("Sum of numbers are : " + sumOfNumbers(integerList));
 
-        System.out.println("Sum of numbers using IntStream are : " + sumOfNumbersIntStream());
+        System.out.println("Sum of numbers using IntStream are : " + sumOfNNumbersIntStream());
     }
 }
