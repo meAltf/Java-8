@@ -1,8 +1,20 @@
 package ParallelStreams;
 
+import java.util.function.Supplier;
 import java.util.stream.IntStream;
 
 public class parallelStreamExample {
+
+    public static long checkPerformanceResult(Supplier<Integer> sum , int numberOfTimes){
+
+        long start = System.currentTimeMillis();
+        for(int i=0;i<numberOfTimes;i++){
+            sum.get();
+        }
+
+        long end = System.currentTimeMillis();
+        return end-start;
+    }
 
     public static int sum_sequential_stream(){
 
@@ -22,8 +34,18 @@ public class parallelStreamExample {
 
     public static void main(String[] args) {
 
-        System.out.println(sum_sequential_stream());
-        System.out.println(sum_parallel_stream());
+//        System.out.println(sum_sequential_stream());
+//        System.out.println(sum_parallel_stream());
+
+        System.out.println(Runtime.getRuntime().availableProcessors());
+
+        long sequentialDuration = checkPerformanceResult(parallelStreamExample::sum_sequential_stream,20);
+        System.out.println("sequentialDuration in MilliSeconds: " + sequentialDuration);
+        //System.out.println("sequentialDuration in MilliSecs : " + TimeUnit.NANOSECONDS.toMillis(sequentialDuration));
+        long parallelDuration =checkPerformanceResult(parallelStreamExample::sum_parallel_stream,20);
+
+        System.out.println("parallelDuration in MilliSeconds: " + parallelDuration);
+        //  System.out.pri
 
     }
 }
