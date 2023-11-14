@@ -30,6 +30,7 @@ public class StreamJoiningExample {
 
     public static String joining(){
 
+        //Overloaded version-1
         return StudentDataBase.getAllStudents().stream()
                 .map(Student::getName)
                 .collect(Collectors.joining()); // appends all the strings to produce the output,
@@ -37,6 +38,7 @@ public class StreamJoiningExample {
 
     public static String joiningWithDelimiter(){
 
+        //Overloaded version-2
         return StudentDataBase.getAllStudents().stream()
                 .map(Student::getName)
                 .collect(Collectors.joining("-"));
@@ -44,6 +46,7 @@ public class StreamJoiningExample {
 
     public static String joiningWithDelimiterWithPrefix(){
 
+        //Overloaded version-3
         return StudentDataBase.getAllStudents().stream()
                 .map(Student::getName)
                 .collect(Collectors.joining("-","[","]"));
