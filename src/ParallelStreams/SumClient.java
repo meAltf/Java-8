@@ -19,6 +19,5 @@ public class SumClient {
             // so whenever you have a muttable variable don't used parallel stream because it gives wrong answer
 
         System.out.println(sum.getTotal());
-        // Always remeber that , when not to use parallel stream
     }
 }
