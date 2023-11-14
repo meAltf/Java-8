@@ -69,6 +69,28 @@ public class StreamGroupingByExample {
         System.out.println(nameNoteBooksMap);
     }
 
+    /**
+     * Grouping by Two parameters
+     */
+    public  static void twoLevelGrouping_3(){
+
+        Map<String,Set<Student>> nameNoteBooksMap = StudentDataBase.getAllStudents().stream()
+                .collect(groupingBy(Student::getName,
+                        toSet()));// second argument can be of any type of collector
+
+        System.out.println(nameNoteBooksMap);
+    }
+
+
+    public static void threeArgumentGroupingBy(){
+
+        LinkedHashMap<String,Set<Student>> studentMap = StudentDataBase.getAllStudents().stream()
+                .collect(groupingBy(Student::getName,LinkedHashMap::new,
+                        toSet()));
+
+        System.out.println(" studentMap : " + studentMap);
+    }
+
 
     public static void main(String[] args) {
 
@@ -76,5 +98,7 @@ public class StreamGroupingByExample {
         //customizedGroupingBy();
         twoLevelGrouping();
         //twoLevelGrouping_2();
+        //twoLevelGrouping_3();
+        // threeArgumentGroupingBy();
     }
 }
