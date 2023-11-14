@@ -1,0 +1,16 @@
+Parallel Stream -
+
+1- Splits the source of data into multiple parts
+2- Process them parallel
+3- combine the result
+
+How to create a parallel stream-
+
+-Sequential Stream-
+    IntStream.rangeClosed(1,1000)
+    .sum();
+
+-Parallel Stream-
+    IntStream.rangeClosed(1,1000)
+    .parallel()
+    .sum();
