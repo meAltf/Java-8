@@ -44,9 +44,37 @@ public class StreamGroupingByExample {
         Stream.of(studentMap).forEach(System.out::println);
     }
 
+    /**
+     * Grouping by Two parameters
+     */
+    public  static void twoLevelGrouping(){
+
+        Map<Integer,  Map<String,List<Student>>> studentMap =  StudentDataBase.getAllStudents().stream()
+                .collect(groupingBy(Student::getGradeLevel,
+                        groupingBy(student -> student.getGpa()>= 3.8 ?  "OUTSTANDING" : "AVERAGE")));
+
+        Stream.of(studentMap).forEach(System.out::println);
+
+    }
+
+    /**
+     * Grouping by Two parameters
+     */
+    public  static void twoLevelGrouping_2(){
+
+        Map<String,Integer> nameNoteBooksMap = StudentDataBase.getAllStudents().stream()
+                .collect(groupingBy(Student::getName,
+                        summingInt(Student::getNoteBooks)));// second argument can be of any type of collector
+
+        System.out.println(nameNoteBooksMap);
+    }
+
+
     public static void main(String[] args) {
 
         //groupingByGender();
-        customizedGroupingBy();
+        //customizedGroupingBy();
+        twoLevelGrouping();
+        //twoLevelGrouping_2();
     }
 }
