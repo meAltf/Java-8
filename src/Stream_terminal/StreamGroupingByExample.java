@@ -91,6 +91,42 @@ public class StreamGroupingByExample {
         System.out.println(" studentMap : " + studentMap);
     }
 
+    public  static void calculteTopGpaStudentinEachGrade(){
+
+        Map<Integer, Optional<Student>> studentMapOptional =  StudentDataBase.getAllStudents().stream()
+                .collect(groupingBy(Student::getGradeLevel,maxBy(Comparator.comparingDouble(Student::getGpa))
+                ));
+
+        Stream.of(studentMapOptional).forEach(System.out::println);
+
+
+        Map<Integer, Student> studentMap =  StudentDataBase.getAllStudents().stream()
+                .collect(groupingBy(Student::getGradeLevel,
+                        collectingAndThen(maxBy(Comparator.comparingDouble(Student::getGpa))
+                                ,Optional::get
+                        )));
+
+        Stream.of(studentMap).forEach(System.out::println);
+    }
+
+    public  static void calculteleastGpaStudentinEachGrade(){
+
+        Map<Integer, Optional<Student>> studentMapOptional =  StudentDataBase.getAllStudents().stream()
+                .collect(groupingBy(Student::getGradeLevel,minBy(Comparator.comparingDouble(Student::getGpa))
+                ));
+
+        Stream.of(studentMapOptional).forEach(System.out::println);
+
+
+        Map<Integer, Student> studentMap =  StudentDataBase.getAllStudents().stream()
+                .collect(groupingBy(Student::getGradeLevel,
+                        collectingAndThen(minBy(Comparator.comparingDouble(Student::getGpa))
+                                ,Optional::get
+                        )));
+
+        Stream.of(studentMap).forEach(System.out::println);
+    }
+
 
     public static void main(String[] args) {
 
@@ -100,5 +136,8 @@ public class StreamGroupingByExample {
         //twoLevelGrouping_2();
         //twoLevelGrouping_3();
         // threeArgumentGroupingBy();
+
+        //calculteTopGpaStudentinEachGrade();
+        //calculteleastGpaStudentinEachGrade();
     }
 }
