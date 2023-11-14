@@ -14,3 +14,13 @@ How to create a parallel stream-
     IntStream.rangeClosed(1,1000)
     .parallel()
     .sum();
+
+How Parallel Stream works-
+
+- Parallel Stream uses the Fork/Join framework that got introduced in Java7
+   - Fork/Join framework, creates multiples threads for parallel stream
+
+
+How many Threads are created ?
+
+- Number of threads created == number of processor available in the machine
