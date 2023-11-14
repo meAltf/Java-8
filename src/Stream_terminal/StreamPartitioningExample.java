@@ -6,8 +6,7 @@ import data.StudentDataBase;
 
 import java.util.function.Predicate;
 
-import static java.util.stream.Collectors.partitioningBy;
-import static java.util.stream.Collectors.toSet;
+import static java.util.stream.Collectors.*;
 
 /**
  * Terminal Operations - partitioningBy()
@@ -45,6 +44,18 @@ public class StreamPartitioningExample {
         Map<Boolean,Set<Student>> studentMap = StudentDataBase.getAllStudents()
                 .stream()
                 .collect(partitioningBy(gpaPredicate,toSet()));
+
+        System.out.println("studentMap : " + studentMap);
+
+    }
+
+    public static void partitioningBy_3(){
+
+        Predicate<Student> gpaPredicate = (student) -> student.getGpa()>=3.8;
+
+        Map<Boolean,Map<String, List<String>>> studentMap = StudentDataBase.getAllStudents()
+                .stream()
+                .collect(partitioningBy(gpaPredicate,toMap(Student::getName,Student::getActivities)));
 
         System.out.println("studentMap : " + studentMap);
 
